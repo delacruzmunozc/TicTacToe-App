@@ -10,7 +10,6 @@
         android:layout_alignParentTop="true"
         android:text="Singleplayer"
         android:onClick="singleplayerClick" />
-
     <Button
         android:id="@+id/Multiplayer"
         android:layout_width="wrap_content"
@@ -19,5 +18,13 @@
         android:layout_below="@+id/Singleplayer"
         android:text="Multiplayer"
         android:onClick="multiplayerClick" />
+    <Button
+        android:id="@+id/SmsMultiplayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Multiplayer"
+        android:text="Multiplayer using SMS"
+        android:onClick="smsMultiplayerClick" />
 
 </RelativeLayout>

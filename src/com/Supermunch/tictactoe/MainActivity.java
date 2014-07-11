@@ -22,4 +22,9 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(this, Multiplayer.class);
 		startActivity(intent); 
 	}
+	public void smsMultiplayerClick(View view)
+	{
+		Intent intent = new Intent(this, SmsMultiplayer.class);
+		startActivity(intent);
+	}
 }

@@ -10,5 +10,6 @@
     <string name="player2Win">Player 2 Wins!</string>
     <string name="singleplayer">Singleplayer Tic-Tac-Toe</string>
     <string name="multiplayer">Multiplayer Tic-Tac-Toe</string>
+    <string name="smsmultiplayer">Multiplayer Tic-Tac-Toe using SMS</string>
 
 </resources>
