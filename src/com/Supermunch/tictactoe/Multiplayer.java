@@ -131,134 +131,206 @@ public class Multiplayer extends Activity {
 	}
 	public void upRightClick(View view)
 	{
-		if (game == true)
+		if (game == true && data[2] == 0)
 		{
-		ImageButton upRight = (ImageButton)findViewById(R.id.ImageButton2);
-		if (data[2] == 0)
-		{
-			upRight.setImageResource(R.drawable.x);
-			data[2] = 1;
-			if ((checkForWin(1)) == 2)
+			ImageButton upRight = (ImageButton)findViewById(R.id.ImageButton2);
+			if (playerTurn == 1)
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Player 1 Wins!");
+				upRight.setImageResource(R.drawable.x);
+				data[2] = 1;
+				if ((checkForWin(1)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 1 Wins!");
+				}
+				else if ((checkForWin(1)) == 1)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Tie");
+				}
+				playerTurn = 2;
 			}
-			else if ((checkForWin(1)) == 1)
+			else
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Tie");
+				upRight.setImageResource(R.drawable.o);
+				data[2] = 2;
+				if ((checkForWin(1)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 2 Wins!");
+				}
+				playerTurn = 1;
 			}
-			playerTurn = 2;
-		}
 		}
 	}
 	public void centerClick(View view)
 	{
-		if (game == true)
+		if (game == true && data[4] == 0)
 		{
-		ImageButton center = (ImageButton)findViewById(R.id.ImageButton4);
-		if (data[4] == 0)
-		{
-			center.setImageResource(R.drawable._lxl_);
-			data[4] = 1;
-			if ((checkForWin(1)) == 2)
+			ImageButton center = (ImageButton)findViewById(R.id.ImageButton4);
+			if (playerTurn == 1)
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Player 1 Wins!");
+				center.setImageResource(R.drawable._lxl_);
+				data[4] = 1;
+				if ((checkForWin(1)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 1 Wins!");
+				}
+				else if ((checkForWin(1)) == 1)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Tie");
+				}
+				playerTurn = 2;
 			}
-			else if ((checkForWin(1)) == 1)
+			else
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Tie");
+				center.setImageResource(R.drawable._lol_);
+				data[4] = 2;
+				if ((checkForWin(2)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 2 Wins!");
+				}
+				playerTurn = 1;
 			}
-			playerTurn = 2;
-		}
 		}
 	}
 	public void downLeftClick(View view)
 	{
-		if (game == true)
+		if (game == true && data[6] == 0)
 		{
-		ImageButton downLeft = (ImageButton)findViewById(R.id.ImageButton6);
-		if (data[6] == 0)
-		{
-			downLeft.setImageResource(R.drawable.x);
-			data[6] = 1;
-			if ((checkForWin(1)) == 2)
+			ImageButton downLeft = (ImageButton)findViewById(R.id.ImageButton6);
+			if (playerTurn == 1)
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Player 1 Wins!");
+				downLeft.setImageResource(R.drawable.x);
+				data[6] = 1;
+				if ((checkForWin(1)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 1 Wins!");
+				}
+				else if ((checkForWin(1)) == 1)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Tie");
+				}
+				playerTurn = 2;
 			}
-			else if ((checkForWin(1)) == 1)
+			else
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Tie");
+				downLeft.setImageResource(R.drawable.o);
+				data[6] = 2;
+				if ((checkForWin(2)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 2 Wins!");
+				}
+				playerTurn = 1;
 			}
-			playerTurn = 2;
-		}
 		}
 	}
 	public void downRightClick(View view)
 	{
-		if (game == true)
+		if (game == true && data[8] == 0)
 		{
-		ImageButton downRight = (ImageButton)findViewById(R.id.ImageButton8);
-		if (data[8] == 0)
-		{
-			downRight.setImageResource(R.drawable.x);
-			data[8] = 1;
-			if ((checkForWin(1)) == 2)
+			ImageButton downRight = (ImageButton)findViewById(R.id.ImageButton8);
+			if (playerTurn == 1)
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Player 1 Wins!");
+				downRight.setImageResource(R.drawable.x);
+				data[8] = 1;
+				if ((checkForWin(1)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 1 Wins!");
+				}
+				else if ((checkForWin(1)) == 1)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Tie");
+				}
+				playerTurn = 2;
 			}
-			else if ((checkForWin(1)) == 1)
+			else
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Tie");
+				downRight.setImageResource(R.drawable.o);
+				data[8] = 2;
+				if ((checkForWin(2)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 2 Wins!");
+				}
+				playerTurn = 1;
 			}
-			playerTurn = 2;
-		}
 		}
 	}
 	public void leftClick(View view)
 	{
-		ImageButton left = (ImageButton)findViewById(R.id.ImageButton3);
-		if (data[3] == 0)
+		if (game == true && data[3] == 0)
 		{
-			left.setImageResource(R.drawable._x_);
-			data[3] = 1;
-			if ((checkForWin(1)) == 2)
+			ImageButton left = (ImageButton)findViewById(R.id.ImageButton3);
+			if (playerTurn == 1)
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Player 1 Wins!");
+				left.setImageResource(R.drawable._x_);
+				data[3] = 1;
+				if ((checkForWin(1)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 1 Wins!");
+				}
+				else if ((checkForWin(1)) == 1)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Tie");
+				}
+				playerTurn = 2;
 			}
-			else if ((checkForWin(1)) == 1)
+			else
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Tie");
+				left.setImageResource(R.drawable._o_);
+				data[3] = 1;
+				if ((checkForWin(1)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 2 Wins!");
+				}
+				playerTurn = 1;
 			}
-			playerTurn = 2;
 		}
 	}
 	public void rightClick(View view)
 	{
-		if (data[5] == 0)
+		if (game == true && data[5] == 0)
 		{
-			ImageButton right = (ImageButton)findViewById(R.id.ImageButton5);
-			right.setImageResource(R.drawable._x_);
-			data[5] = 1;
-			if ((checkForWin(1)) == 2)
+			if (playerTurn == 1)
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Player 1 Wins!");
+				ImageButton right = (ImageButton)findViewById(R.id.ImageButton5);
+				right.setImageResource(R.drawable._x_);
+				data[5] = 1;
+				if ((checkForWin(1)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 1 Wins!");
+				}
+				else if ((checkForWin(1)) == 1)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Tie");
+				}
+				playerTurn = 2;
 			}
-			else if ((checkForWin(1)) == 1)
+			else 
 			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Tie");
+				ImageButton right = (ImageButton)findViewById(R.id.ImageButton5);
+				right.setImageResource(R.drawable._o_);
+				data[5] = 2;
+				if ((checkForWin(2)) == 2)
+				{
+					TextView textView = (TextView)findViewById(R.id.textView1);
+					textView.setText("Player 2 Wins!");
+				}
 			}
-			playerTurn = 2;
 		}
 	}
 		public int checkForWin(int player)
