@@ -2,6 +2,7 @@ package com.Supermunch.tictactoe;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -18,10 +19,12 @@ public class SmsMultiplayer extends Activity {
 	public Boolean playerTurn = true;
 	public int[] data = new int[9];
 	public Boolean game = true;
+	String number;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.smsmultiplayer);
+	    number = getIntent().getStringExtra("number");
 		for (int i = 0; i < 9; i++)
 		{
 			data[i] = 0;
@@ -36,6 +39,8 @@ public class SmsMultiplayer extends Activity {
 			{
 				up.setImageResource(R.drawable.lxl);
 				data[1] = 1;
+				SmsManager smsManager = SmsManager.getDefault();
+				smsManager.sendTextMessage(number, null, "1", null, null);
 				if ((checkForWin(1)) == 2)
 				{
 					TextView textView = (TextView)findViewById(R.id.textView1);

@@ -3,11 +3,11 @@
     package="com.Supermunch.tictactoe"
     android:versionCode="1"
     android:versionName="1.0" >
-
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -24,10 +24,17 @@
         </activity>
         <activity
             android:name=".Singleplayer"
-            android:label="@string/singleplayer" />
+            android:label="@string/singleplayer" /><activity
+            android:name=".SmsMultiplayer"
+            android:label="@string/SmsMultiplayer" />
         <activity
             android:name=".Multiplayer"
             android:label="@string/multiplayer" />
+        <receiver android:name=".SMSReceiver" android:enabled="true">
+      		<intent-filter>
+        		<action android:name="android.provider.Telephony.SMS_RECEIVED" />
+      		</intent-filter>
+</receiver>
     </application>
 
 </manifest>
