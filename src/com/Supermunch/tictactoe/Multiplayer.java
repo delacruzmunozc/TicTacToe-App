@@ -334,7 +334,7 @@ public class Multiplayer extends Activity {
 			}
 		}
 	}
-		public int checkForWin(int player)
+	public int checkForWin(int player)
 	{
 		if ((data[0] == player && data[1] == player && data[2] == player)
 		 || (data[3] == player && data[4] == player && data[5] == player)
@@ -345,6 +345,7 @@ public class Multiplayer extends Activity {
 		 || (data[1] == player && data[4] == player && data[7] == player)
 		 || (data[2] == player && data[5] == player && data[8] == player))
 		{
+			game = false;
 			return 2;
 		}
 		else if (data[0] != 0 && data[1] != 0
@@ -353,6 +354,7 @@ public class Multiplayer extends Activity {
 				&& data[6] != 0 && data[7] != 0
 				&& data[8] != 0)
 		{
+			game = false;
 			return 1;
 		}
 		else

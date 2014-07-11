@@ -29,11 +29,9 @@ public class Singleplayer extends Activity {
 	}
 	public void upClick(View view)
 	{
-		if (game == true)
+		if (data[1] == 0 && game == true)
 		{
 		ImageButton up = (ImageButton)findViewById(R.id.ImageButton1);
-		if (data[1] == 0)
-		{
 			up.setImageResource(R.drawable.lxl);
 			data[1] = 1;
 			if ((checkForWin(1)) == 2)
@@ -49,15 +47,12 @@ public class Singleplayer extends Activity {
 			else
 			computerPlay();
 		}
-		}
 	}
 	public void downClick(View view)
 	{
-		if (game == true)
+		if (data[7] == 0 && game == true)
 		{
 		ImageButton down = (ImageButton)findViewById(R.id.ImageButton7);
-		if (data[7] == 0)
-		{
 			down.setImageResource(R.drawable.lxl);
 			data[7] = 1;
 			if ((checkForWin(1)) == 2)
@@ -73,133 +68,118 @@ public class Singleplayer extends Activity {
 			else
 			computerPlay();
 		}
-		}
 	}
 	public void upLeftClick(View view)
 	{
-		if (game == true)
+		if (data[0] == 0 && game == true)
 		{
 		ImageButton upLeft = (ImageButton)findViewById(R.id.ImageButton0);
-		if (data[0] == 0)
+		upLeft.setImageResource(R.drawable.x);
+		data[0] = 1;
+		if ((checkForWin(1)) == 2)
 		{
-			upLeft.setImageResource(R.drawable.x);
-			data[0] = 1;
-			if ((checkForWin(1)) == 2)
-			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("You Win!");
-			}
-			else if ((checkForWin(1)) == 1)
-			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Tie");
-			}
-			else
-			computerPlay();
+			TextView textView = (TextView)findViewById(R.id.textView1);
+			textView.setText("You Win!");
 		}
+		else if ((checkForWin(1)) == 1)
+		{
+			TextView textView = (TextView)findViewById(R.id.textView1);
+			textView.setText("Tie");
+		}
+		else
+		computerPlay();
 		}
 	}
 	public void upRightClick(View view)
 	{
-		if (game == true)
+		if (data[2] == 0 && game == true)
 		{
 		ImageButton upRight = (ImageButton)findViewById(R.id.ImageButton2);
-		if (data[2] == 0)
+		upRight.setImageResource(R.drawable.x);
+		data[2] = 1;
+		if ((checkForWin(1)) == 2)
 		{
-			upRight.setImageResource(R.drawable.x);
-			data[2] = 1;
-			if ((checkForWin(1)) == 2)
-			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("You Win!");
-			}
-			else if ((checkForWin(1)) == 1)
-			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Tie");
-			}
-			else
-			computerPlay();
+			TextView textView = (TextView)findViewById(R.id.textView1);
+			textView.setText("You Win!");
 		}
+		else if ((checkForWin(1)) == 1)
+		{
+			TextView textView = (TextView)findViewById(R.id.textView1);
+			textView.setText("Tie");
+		}
+		else
+		computerPlay();
 		}
 	}
 	public void centerClick(View view)
 	{
-		if (game == true)
+		if (data[4] == 0 && game == true)
 		{
 		ImageButton center = (ImageButton)findViewById(R.id.ImageButton4);
-		if (data[4] == 0)
+		center.setImageResource(R.drawable._lxl_);
+		data[4] = 1;
+		if ((checkForWin(1)) == 2)
 		{
-			center.setImageResource(R.drawable._lxl_);
-			data[4] = 1;
-			if ((checkForWin(1)) == 2)
-			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("You Win!");
-			}
-			else if ((checkForWin(1)) == 1)
-			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Tie");
-			}
-			else
-			computerPlay();
+			TextView textView = (TextView)findViewById(R.id.textView1);
+			textView.setText("You Win!");
 		}
+		else if ((checkForWin(1)) == 1)
+		{
+			TextView textView = (TextView)findViewById(R.id.textView1);
+			textView.setText("Tie");
+		}
+		else
+		computerPlay();
 		}
 	}
 	public void downLeftClick(View view)
 	{
-		if (game == true)
+		if (data[6] == 0 && game == true)
 		{
 		ImageButton downLeft = (ImageButton)findViewById(R.id.ImageButton6);
-		if (data[6] == 0)
+		downLeft.setImageResource(R.drawable.x);
+		data[6] = 1;
+		if ((checkForWin(1)) == 2)
 		{
-			downLeft.setImageResource(R.drawable.x);
-			data[6] = 1;
-			if ((checkForWin(1)) == 2)
-			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("You Win!");
-			}
-			else if ((checkForWin(1)) == 1)
-			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Tie");
-			}
-			else
-			computerPlay();
+			TextView textView = (TextView)findViewById(R.id.textView1);
+			textView.setText("You Win!");
 		}
+		else if ((checkForWin(1)) == 1)
+		{
+			TextView textView = (TextView)findViewById(R.id.textView1);
+			textView.setText("Tie");
+		}
+		else
+		computerPlay();
 		}
 	}
 	public void downRightClick(View view)
 	{
-		if (game == true)
+		if (data[8] == 0 && game == true)
 		{
 		ImageButton downRight = (ImageButton)findViewById(R.id.ImageButton8);
-		if (data[8] == 0)
+		downRight.setImageResource(R.drawable.x);
+		data[8] = 1;
+		if ((checkForWin(1)) == 2)
 		{
-			downRight.setImageResource(R.drawable.x);
-			data[8] = 1;
-			if ((checkForWin(1)) == 2)
-			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("You Win!");
-			}
-			else if ((checkForWin(1)) == 1)
-			{
-				TextView textView = (TextView)findViewById(R.id.textView1);
-				textView.setText("Tie");
-			}
-			else
-			computerPlay();
+			TextView textView = (TextView)findViewById(R.id.textView1);
+			textView.setText("You Win!");
 		}
+		else if ((checkForWin(1)) == 1)
+		{
+			TextView textView = (TextView)findViewById(R.id.textView1);
+			textView.setText("Tie");
+		}
+		else
+		computerPlay();
 		}
 	}
 	public void leftClick(View view)
 	{
-		ImageButton left = (ImageButton)findViewById(R.id.ImageButton3);
-		if (data[3] == 0)
+		if (data[3] == 0 && game == true)
 		{
+		ImageButton left = (ImageButton)findViewById(R.id.ImageButton3);
+		
 			left.setImageResource(R.drawable._x_);
 			data[3] = 1;
 			if ((checkForWin(1)) == 2)
@@ -558,6 +538,7 @@ public class Singleplayer extends Activity {
 		 || (data[1] == player && data[4] == player && data[7] == player)
 		 || (data[2] == player && data[5] == player && data[8] == player))
 		{
+			game = false;
 			return 2;
 		}
 		else if (data[0] != 0 && data[1] != 0
@@ -566,6 +547,7 @@ public class Singleplayer extends Activity {
 				&& data[6] != 0 && data[7] != 0
 				&& data[8] != 0)
 		{
+			game = false;
 			return 1;
 		}
 		else
