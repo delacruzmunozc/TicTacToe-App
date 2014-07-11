@@ -289,8 +289,8 @@ public class Multiplayer extends Activity {
 			else
 			{
 				left.setImageResource(R.drawable._o_);
-				data[3] = 1;
-				if ((checkForWin(1)) == 2)
+				data[3] = 2;
+				if ((checkForWin(2)) == 2)
 				{
 					TextView textView = (TextView)findViewById(R.id.textView1);
 					textView.setText("Player 2 Wins!");
@@ -330,6 +330,7 @@ public class Multiplayer extends Activity {
 					TextView textView = (TextView)findViewById(R.id.textView1);
 					textView.setText("Player 2 Wins!");
 				}
+				playerTurn = 1;
 			}
 		}
 	}
