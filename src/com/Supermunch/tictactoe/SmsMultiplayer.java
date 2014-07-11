@@ -239,6 +239,31 @@ public class SmsMultiplayer extends Activity {
 			}
 		}
 	}
+	public void smsplayerPlay()
+	{
+		android.os.SystemClock.sleep(1000);
+		String play = SMSReciever.getMessage();
+		int number = Integer.parseInt(play);
+		switch (number)
+		{
+		case 1:
+		break;
+		case 2:
+		break;
+		case 3:
+		break;
+		case 4:
+		break;
+		case 5:
+		break;
+		case 6:
+		break;
+		case 7:
+		break;
+		case 8:
+		break;
+		}
+	}
 	public int checkForWin(int player)
 	{
 		if ((data[0] == player && data[1] == player && data[2] == player)
