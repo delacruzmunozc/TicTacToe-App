@@ -7,12 +7,10 @@ import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends Activity {
-	private EditText phoneNo;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		phoneNo = (EditText)findViewById(R.id.mobileNumber);
 	}
 	public void singleplayerClick(View view)
 	{
@@ -24,10 +22,9 @@ public class MainActivity extends Activity {
 		Intent intent = new Intent(this, Multiplayer.class);
 		startActivity(intent); 
 	}
-	public void smsMultiplayerClick(View view)
+	public void impossibleClick(View view)
 	{
-		Intent intent = new Intent(this, SmsMultiplayer.class);
-		intent.putExtra("number", phoneNo.getText().toString());
+		Intent intent = new Intent(this, ImpossibleSingleplayer.class);
 		startActivity(intent);
 	}
 }
